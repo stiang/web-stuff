@@ -19,9 +19,13 @@
     </script>
   </head>
   <body>
-    <h1>Hei fra RN</h1>
+    <h1 id="title">Hei fra RN</h1>
     <script>
-      sendMessage({hi: 'there'});
+      setTimeout(function() {
+        var el = document.querySelector('#title');
+        el.innerHTML = 'Sender beskjed...';
+        sendMessage({hi: 'there'});
+      }, 1000);
     </script>
   </body>
 </html>
