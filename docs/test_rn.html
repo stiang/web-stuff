@@ -1,8 +1,5 @@
 <html>
   <head>
-  </head>
-  <body>
-    <h1>Hei fra RN</h1>
     <script>
       const MESSAGE_PREFIX = 'hiho';
       sendMessage = (payload) => {
@@ -19,6 +16,11 @@
           console.log('unable to find postMessage');
         }
       };
+    </script>
+  </head>
+  <body>
+    <h1>Hei fra RN</h1>
+    <script>
       sendMessage({hi: 'there'});
     </script>
   </body>
