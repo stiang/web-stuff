@@ -1,9 +1,9 @@
 <html>
   <head>
     <script>
-      const MESSAGE_PREFIX = 'hiho';
-      sendMessage = (payload) => {
-        const message = JSON.stringify({
+      var MESSAGE_PREFIX = 'hiho';
+      function sendMessage(payload) {
+        var message = JSON.stringify({
           prefix: MESSAGE_PREFIX,
           payload: payload
         });
