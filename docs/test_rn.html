@@ -1,1 +1,25 @@
-<h1>Hei fra RN</h1>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hei fra RN</h1>
+    <script>
+      const MESSAGE_PREFIX = 'hiho';
+      sendMessage = (payload) => {
+        const message = JSON.stringify({
+          prefix: MESSAGE_PREFIX,
+          payload: payload
+        });
+
+        if (document.hasOwnProperty('postMessage')) {
+          document.postMessage(message, '*');
+        } else if (window.hasOwnProperty('postMessage')) {
+          window.postMessage(message, '*');
+        } else {
+          console.log('unable to find postMessage');
+        }
+      };
+      sendMessage({hi: 'there'});
+    </script>
+  </body>
+</html>
