@@ -5,7 +5,7 @@
     window.onload = function() {
       var payload = {foobar: 'https://get.me/bla?me=too'}; 
       var str = 'dropinno:bookings?';
-      Object.keys(payload, function(key) {
+      Object.keys(payload).forEach(function(key) {
         str += key + '=' + encodeURIComponent(payload[key]);
       });
       console.log('str', str);
