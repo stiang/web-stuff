@@ -3,10 +3,12 @@
 <head>
     <script>
     window.onload = function() {
-    <!-- Deep link URL for existing users with app already installed on their device -->
-        window.location = 'dropinno:some/thing?screen=xxxxx';
-    <!-- Download URL (TUNE link) for new users to download the app -->
-        // setTimeout("window.location = 'http://hastrk.com/serve?action=click&publisher_id=1&site_id=2';", 1000);
+      var payload = {foobar: 'https://get.me/bla?me=too'}; 
+      var str = 'dropinno:bookings?';
+      Object.keys(payload, function(key) {
+        str += key + '=' + encodeURIComponent(payload[key]);
+      });
+      window.location = str;
     }
     </script>
 </head>
