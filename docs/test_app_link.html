@@ -8,6 +8,7 @@
       Object.keys(payload, function(key) {
         str += key + '=' + encodeURIComponent(payload[key]);
       });
+      console.log('str', str);
       window.location = str;
     }
     </script>
